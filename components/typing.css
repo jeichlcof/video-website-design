@@ -1,0 +1,39 @@
+.typing {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 140px;
+  font-size: 80px;
+  line-height: 120px;
+  color: white;
+  text-shadow: 6px 6px 6px black;
+}
+.typing p {
+  overflow: hidden;
+  white-space: nowrap;
+}
+.typing p:first-child {
+  border-right: 4px solid white;
+  animation: typing 2s steps(17) forwards, blink-caret 1s step-end infinite;
+}
+
+@keyframes blink-caret {
+  0% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
+  100% {
+    border-color: transparent;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
